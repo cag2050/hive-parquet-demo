@@ -12,29 +12,32 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hadoop.version>2.10.1</hadoop.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.parquet</groupId>
-            <artifactId>parquet-column</artifactId>
-            <version>1.11.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.parquet</groupId>
-            <artifactId>parquet-hadoop</artifactId>
-            <version>1.11.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
-            <version>3.1.1</version>
+            <version>${hadoop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
-            <version>3.1.1</version>
+            <version>${hadoop.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-column</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-hadoop</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.jodd</groupId>
             <artifactId>jodd-core</artifactId>
